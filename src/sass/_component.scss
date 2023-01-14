@@ -1,0 +1,149 @@
+$main-Color:#FFFFFF;
+$cream-color:#FCF8ED;
+$text-color:rgb(133, 125, 125);
+$border-color:#dbdad6;
+ *{
+     padding: 0;
+     margin: 0;
+ }
+ body{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     overflow-X: hidden;
+     text-transform: capitalize;
+ }
+
+ @mixin center {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ @mixin fullspace {
+     width: 100%;
+     height: 100%;
+ }
+ .banner{
+    padding: 150px 15%;
+    background-color: $cream-color;
+    &-header{
+        padding: 25px;
+        @include center;
+        flex-direction: column;
+        span{
+            text-decoration: underline;
+        }
+        h1{
+            font-size: 70px;
+            font-weight: 100;
+        }
+        img{
+            width: 150px
+        }
+    }
+    &-Text{
+        @include center;
+        justify-content: space-evenly;
+        flex-wrap:wrap ;
+        p{
+            @media (max-width:768px) {
+                width: 100%;
+                
+            }
+            @include center;    
+            justify-content: flex-end;
+            line-height: 1.5;
+            width: 40%;
+            color: rgb(133, 125, 125);
+        }
+    }
+    &-Signuture{
+        @include center;
+        justify-content: space-evenly;
+        padding: 20px;
+        .section{
+            
+
+        }
+    }
+    &-Product{
+        @include center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        &-Section{
+         
+       
+            @media (max-width:1200px) {
+                width: 20%;
+                
+            }
+            @media (max-width:992px) {
+                width: 30%;
+                
+            }
+            @media (max-width:768px) {
+                width: 40%;
+                
+            }   
+            width: 20%;
+            overflow: hidden;
+            position: relative;
+            img{
+                @include fullspace;
+            }
+            .overLay{
+                @include center;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                height: 100%;
+              bottom: -100%;
+              opacity: 0;
+               
+                background-color: #fcf8ed71;
+
+             transition: 0.3s;
+             font-size: 24px;
+
+            }
+            &:hover .overLay{
+                opacity: 1;
+                bottom: 0
+            }   
+        }
+    }   
+}
+//full img
+.full-Img{
+    width: 100%;
+ 
+}
+.underLine{
+    border-bottom: 1px solid $text-color;
+}
+.hambergur-Menu{
+    width: 40px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    div{
+        height: 2px;
+        background-color: $text-color;
+    }
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: -100%;
+    transition: 0.3s;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}

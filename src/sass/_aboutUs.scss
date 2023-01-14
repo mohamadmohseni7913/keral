@@ -1,0 +1,121 @@
+.explain{
+    padding: 100px 10%;
+    &-Section{
+        @include center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        &:nth-child(even) {
+           flex-direction: row-reverse;
+          }
+        div{
+            @media (max-width:992px) {
+                width: 100%;
+                
+            }
+            width: 40%;
+        }
+        &-Text{
+            color: $text-color;
+            h1{
+                font-size: 60px;
+                color: black;
+              
+            }
+           
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            line-height: 2;
+            @media (max-width:992px) {
+              padding: 50px 0;
+                
+            }
+
+        }
+        &-Img{
+            img{
+                width: 100%;
+            }
+        }
+    }
+    
+}
+.product-Cmp{
+    @include center;
+    flex-wrap: wrap ;
+    justify-content: space-evenly;
+    padding: 100px 10%;
+    background-color: $cream-color;
+    &-Section{
+        @media (max-width:1400px) {
+            width: 30%;
+            
+        }
+        @media (max-width:992px) {
+            width: 45%;            
+        }
+        @media (max-width:768px) {
+            width: 100%;
+        }
+     @media (max-width:576px) {
+            width: 100%;
+         
+     }
+        width: 30%;
+        text-align: center;
+        
+        img{
+            width: 100%;
+        }
+        h1{
+            margin: 15px 0;
+            font-weight: 100;
+        }
+        p{
+          
+            font-size: 14px;
+            color: $text-color;
+            line-height: 1.5;
+        }
+    }
+}
+//work time
+.work-Time{
+    @include center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 100px 10%;
+    text-align: left;
+    div{
+        width: 40%;
+        @media (max-width:992px) {
+            width: 100%;
+            
+        }
+        @media (max-width:576px) {
+            width: 100%;
+            
+        }
+    }
+    &-Img{
+        img{
+            width: 100%;
+        }
+    }
+    &-Text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+        span{
+            color: $text-color;
+        }
+        .table{
+            width: 100%;
+            padding:  15px 0;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgb(195, 188, 188);
+        }
+    }
+}

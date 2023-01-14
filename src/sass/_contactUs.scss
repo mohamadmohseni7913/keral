@@ -1,0 +1,29 @@
+.contactUs{
+    padding: 50px 10%;
+    line-height: 2;
+    &-Detail{
+        @include center;
+        text-align: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        &-Section{
+            width: 30%;
+            img{
+                margin: 15px 0;
+                width: 100%;
+            }
+            .social-Media-Icon{
+                margin: 15px 0;
+                display: flex;
+                justify-content: space-evenly   ;
+            }
+        }
+    }
+}
+.line-Center{
+    width: 1px ;
+    height: 50vh;
+   
+    background-color: rgba(189, 187, 187, 0.555);
+}

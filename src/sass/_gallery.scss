@@ -1,0 +1,52 @@
+.gallery{
+    @include center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 50px 10%;
+    &-Section{
+        width: 30%;
+        position: relative;
+        margin: 10px 0;
+   
+        img{
+            width: 100%;
+        }
+        &-Overlay{
+            @include center;
+            position: absolute;
+            text-align: center;
+            width: 90%;
+            height: 90%;
+            background-color: $cream-color;
+            top: 5%;
+            right: 5%;
+           
+            opacity: 0;
+            transition: 0.3s;
+            h1{
+                opacity: 0;
+                transition: 0.3s;
+                margin-top:30px ;
+                span{
+                    transition: 0.4s;
+                    transition-delay: 0.2s;
+                    font-size: 14px;
+                    opacity: 0;
+                }
+            }
+
+        }
+        &:hover &-Overlay{
+            opacity: 1;
+        }
+        &:hover &-Overlay>h1{
+            margin: 0;
+            opacity: 1;
+        }
+        &:hover &-Overlay>h1>span{
+            margin: 0;
+            opacity: 1;
+        }
+
+    }
+}
